@@ -10,7 +10,7 @@ class Matrix {
 
 	int n;
 	long[][] mat;
-	static final int MOD = 1_000_000_000 + 7;
+	static final int MOD = 1_000_000_007;
 
 	Matrix(int n) {
 		this.n = n;
