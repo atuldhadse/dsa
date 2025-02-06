@@ -1,7 +1,9 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class LongestMountain {
 
@@ -12,7 +14,7 @@ public class LongestMountain {
 				.toArray();
 		LongestMountain obj = new LongestMountain();
 		int output = obj.longestMountain(arr);
-		System.out.println(output);
+		System.out.println(output);	
 	}
 
 	public int longestMountain(int[] arr) {
