@@ -12,7 +12,7 @@ public class MinimumSwaps {
 	public static void main(String[] args) {
 		int[] arr = InputClass.getIntArrayFromString(scn.nextLine());
 		MinimumSwaps obj = new MinimumSwaps();
-		System.out.println(obj.minSwaps(arr));
+		System.out.println(obj.solve2(arr));
 	}
 
 	public int minSwaps(int arr[]) {
@@ -43,6 +43,30 @@ public class MinimumSwaps {
 		}
 		return ans;
 
+	}
+
+	public int solve2(int[] arr) {
+		int ans = 0;
+		int n = arr.length;
+		Map<Integer, Integer> mp = new HashMap<>();
+		for (int i = 0; i < n; i++) {
+			mp.put(arr[i], i);
+		}
+		Arrays.sort(arr);
+		boolean[] visited = new boolean[n];
+		for (int i = 0; i < n; i++) {
+			if (!visited[i]) {
+				int count = 0;
+				int j = i;
+				while (!visited[j]) {
+					visited[j] = true;
+					j = mp.get(arr[j]);
+					count++;
+				}
+				ans += (count - 1);
+			}
+		}
+		return ans;
 	}
 
 }

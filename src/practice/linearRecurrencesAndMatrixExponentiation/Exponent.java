@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Exponent {
 
 	static Scanner scn = new Scanner(System.in);
-	static long MOD = 1_000_000_000 + 7;
+	static long MOD = 1_000_000_007;
 
 	/**
 	 * @param a
